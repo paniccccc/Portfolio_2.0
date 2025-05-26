@@ -1,7 +1,7 @@
 export default [
     {
-        year: 'Today',
-        title: "Analyst, S&A offering portfolio",
+        year: '2023-Today',
+        title: "Analyst, AI & Engineering",
         duration: ' ',
         details: 'Deloitte US India Offices',
     },
