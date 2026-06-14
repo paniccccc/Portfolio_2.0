@@ -2,13 +2,15 @@ import React from 'react';
 
 function Title({children, id}) {
 	return (
-		<h1  
-        id = {id && id}
-        className="text-center text-2xl font-bold underline underline-offset-8 
-        decoration-4 mb-5 text-black-500 bg-white"
-        >
-           {children}
-        </h1>
+		<div className="flex flex-col items-center mb-8">
+			<h2  
+				id={id}
+				className="text-2xl md:text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-100"
+			>
+				{children}
+			</h2>
+			<div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mt-2.5" />
+		</div>
 	);
 }
 
