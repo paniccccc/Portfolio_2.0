@@ -2,47 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3{
+h1, h2, h3, h4, h5, h6 {
   font-family: 'DM Sans', sans-serif;
 }
 
-p{
+p, span, li, input, textarea, a, button {
   font-family: 'DM Sans', sans-serif;
-  font-size:large;
-}
-
-a, button{
-  font-family: 'DM Sans', sans-serif;
-  font-size: small;
 }
 
 body {
-  background-size: 20px 20px;
-  background-image: radial-gradient(circle, #00000052 1px, rgba(0, 0, 0, 0) 1px);
+  @apply bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  min-height: 100vh;
 }
 
-body {
-  padding: 50px; 
+/* Custom scrollbar for modern aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* .shape{
-  object-position:right;
-  width: 80px;
-  aspect-ratio: 1;
-  border: 10px solid #00000000;
-  background: 
-    radial-gradient(farthest-side,#fff 98%,#ffe60000 ) 50%/20px 20px,
-    radial-gradient(farthest-side,#fff 98%,#ffe60000 ) 50%/20px 20px,
-    radial-gradient(farthest-side,#fff 98%,#ffe60000 ) 50%/20px 20px,
-    radial-gradient(farthest-side,#fff 98%,#ffe60000 ) 50%/20px 20px,
-    radial-gradient(farthest-side,#fff 98%,#ffe60000 ) 50%/20px 20px,
-    linear-gradient(#fbff00 0 0) 50%/100% 10px,
-    linear-gradient(#fbff00 0 0) 50%/10px 100%,
-    #ffffff;
-  background-repeat:no-repeat;
-  filter: blur(4px) contrast(10);
-  animation: b3 0.8s infinite;
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
 }
-@keyframes b3 {
-  100%  {background-position:50% -20px,-20px 50%,60px 50%,50% 60px,50%,50%,50%}
-} */
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-slate-400 dark:hover:bg-slate-700 transition-colors;
+}
